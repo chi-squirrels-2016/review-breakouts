@@ -1,0 +1,37 @@
+Assessment
+
+OOJS
+
+constructor functions
+prototypes
+object literals
+this
+scope
+Jasmine
+
+AJAX/JS/JQUERY
+
+what is ajax?
+method, url, data, dataType, done/fail, success/error
+event bindings
+jquery selectors to bind the correct event
+event delegation
+where to put the ajax reponse text/html, etc
+request.done
+request.fail
+controller xhr/non-xhr
+JSON
+
+CRUD
+AR Associations
+restful routes
+AR validations
+Authentication / Bcrypt
+Migrations
+Helper methods
+erbs / partials
+session
+protecting your routes
+CSS
+
+
