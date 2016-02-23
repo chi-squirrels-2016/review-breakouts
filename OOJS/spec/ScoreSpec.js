@@ -2,7 +2,7 @@ describe("Score", function() {
   var score;
 
   beforeEach(function() {
-    score = new Score("Bob", 300));
+    score = new Score("Bob", 300);
   });
 
   it("should have a player name", function() {
