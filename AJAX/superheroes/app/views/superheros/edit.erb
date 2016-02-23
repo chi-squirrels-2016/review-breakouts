@@ -1,0 +1,10 @@
+<h1>Edit Superhero</h1>
+
+<form action="/superheros/<%= @superhero.id %>" method="POST">
+  <input type="hidden" name="_method" value="PUT">
+  <input type="text" name="superhero[name]" value="<%= @superhero.name %>">
+  <input type="text" name="superhero[power]" value="<%= @superhero.power %>">
+  <input type="submit">
+</form>
+
+<p><a href="/">Go Home</a></p>

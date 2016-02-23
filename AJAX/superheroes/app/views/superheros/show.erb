@@ -1,0 +1,13 @@
+<h1><%= @superhero.name %></h1>
+
+<h3>Power: <%= @superhero.power %></h3>
+
+<p><a href="/superheros/<%= @superhero.id %>/edit"><button>Edit</button></a></p>
+<p>
+  <form action="/superheros/<%= @superhero.id %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <button type="submit">Delete</button>
+  </form>
+</p>
+
+<p><a href="/">Go Home</a></p>
