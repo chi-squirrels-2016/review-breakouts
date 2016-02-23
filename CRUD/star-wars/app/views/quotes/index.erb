@@ -1,0 +1,15 @@
+<h1>Star wars quotes</h1>
+
+<% if authenticated? %>
+<p>Welcome <%= current_user.username %></p>
+<% else %>
+<p><a href="/session/new">Login</a></p>
+<p><a href="/users/new">Signup</a></p>
+<% end %>
+
+
+<ul>
+<% @quotes.each do |quote| %>
+  <li><%= quote.text %></li>
+<% end %>
+</ul>

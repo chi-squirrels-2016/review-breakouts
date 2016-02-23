@@ -24,3 +24,12 @@ describe("Game", function() {
 
 
 });
+
+  // var ObjLiteral = {
+  //   name: "Ray",
+  //   saysStuff: function(){
+  //     return "I'm innocent"
+  //   }
+  // }
+
+  // ObjLiteral.saysStuff();

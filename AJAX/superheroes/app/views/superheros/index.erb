@@ -1,11 +1,12 @@
 <div class="container">
   <h1>Superheros</h1>
 
-  <a href="/superheros/new">Create New Superhero</a>
+  <a href="/superheros/new" id="newSuperhero">Create New Superhero</a>
+
   <div class="superheros">
     <ul>
       <% @superheros.each do |superhero| %>
-        <li id="<%= superhero.id %>"><a href="/superheros/<%= superhero.id %>"><%= superhero.name %> - <%= superhero.power %></a></li>
+        <%= erb :"superheros/_superhero", locals: {superhero: superhero}%>
       <% end %>
     </ul>
   </div>

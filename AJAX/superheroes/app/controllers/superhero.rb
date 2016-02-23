@@ -5,7 +5,13 @@ end
 
 get '/superheros/new' do
   @superhero = Superhero.new
-  erb :"superheros/new"
+
+  if request.xhr?
+    erb :"superheros/_new", layout: false, locals: {superhero: @superhero}
+  else
+    erb :"superheros/new"
+  end
+
 end
 
 get '/superheros/:id' do
@@ -22,9 +28,18 @@ post '/superheros' do
   @superhero = Superhero.new(params[:superhero])
 
   if @superhero.save
-    redirect '/superheros'
+    if request.xhr?
+      erb :"superheros/_superhero", layout: false, locals: {superhero: @superhero}
+    else
+      redirect '/superheros'
+    end
   else
-    erb :"superheros/new"
+    if request.xhr?
+      status 422
+      "Record did not save."
+    else
+      erb :"superheros/new"
+    end
   end
 end
 
