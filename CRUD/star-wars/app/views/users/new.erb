@@ -1,0 +1,14 @@
+<h1>Sign up</h1>
+
+<% unless @user.errors.empty? %>
+  <ul>
+  <% @user.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+</ul>
+<% end %>
+<form action="/users" method="POST">
+  <input type="text" name="user[username]" placeholder="username" value="<%= @user.username %>">
+  <input type="password" name="user[password]" placeholder="password">
+  <input type="submit">
+</form>

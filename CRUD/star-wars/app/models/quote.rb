@@ -1,3 +1,8 @@
 class Quote < ActiveRecord::Base
-  # Remember to create a migration!
+  has_many :votes
+  has_many :voters, through: :votes
+
+  def vote_count
+    votes.count
+  end
 end
