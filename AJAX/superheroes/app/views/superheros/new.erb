@@ -1,10 +1,6 @@
 <h1>Create Superhero</h1>
 
-<form action="/superheros" method="POST">
-  <input type="text" name="superhero[name]" value="<%= @superhero.name %>" placeholder="Name">
-  <input type="text" name="superhero[power]" value="<%= @superhero.power %>" placeholder="Power">
-  <input type="submit">
-</form>
+<%= erb :"superheros/_new", locals: {superhero: @superhero} %>
 
 <p><a href="/">Go Home</a></p>
 
